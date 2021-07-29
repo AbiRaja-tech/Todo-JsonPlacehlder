@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO</title>
+        <link rel="stylesheet" href="style1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    </head>
+    <script src="script2.js">        
+    </script>
+    <body>
+        <div class= "hero">
+            
+             <div class="sports" id="sports">
+               
+             </div>
+             <section id="moviessec">
+             <div class="movies" id="movies">
+            
+              </div>
+              </section>
+              <section id="Entertainmentsec">
+              <div class="Entertainment" id="Entertainment">
+
+              </div>
+              </section>
+              <section id="Studiessec">
+              <div class="Studies" id="studies">
+
+              </div>
+              </section>
+
+              <section id="submitform">
+                <div class="formbody">  
+                  <div class="wrapper">
+                    <header>Add Element Form</header>
+                    <form id="addPostForm">
+                     <div class="inform">
+                        <div class="inputUserId">
+                          <input type="number" id="userId" placeholder="User Id">
+                          <i class="error-icon fas fa-exclamation-circle"></i>
+                        </div> 
+                        <div class="error-txt">User Id can't be blank</div>
+                     </div> 
+                     <div class="inform">
+                        <div class="inputTitle">
+                           <input type="text" id="title" placeholder="Title">
+                           <i class="error-icon fas fa-exclamation-circle"></i>   
+                        </div>
+                        
+                        <div class="error-txt">Title can't be blank</div>
+                     </div>
+                     
+                     <div class="inform">
+                        <div class="inputComplted">
+                           <input type="text" id="completed" placeholder="Completed">
+                           <i class="error-icon fas fa-exclamation-circle"></i>  
+                        </div>
+                        
+                        <div class="error-txt">Completed can't be blank</div>
+                     </div>
+
+                        <input type="submit" value="Submit">
+                      
+                    </form>
+                    <div class="paragh">
+                       <p>*User Id =1 for Sports</p>
+                       <p>*User Id =2 for Movies</p>
+                       <p>*User Id =3 for Entertainment</p>
+                       <p>*User Id =4 for Studies</p>
+                    </div>
+                  </div>
+                 </section>
+        </div>
+        <div class="bubbles">
+            <img src="imag/bubble.png">
+            <img src="imag/bubble.png">
+            <img src="imag/bubble.png">
+            <img src="imag/bubble.png">
+            <img src="imag/bubble.png">
+            <img src="imag/bubble.png">
+            <img src="imag/bubble.png">
+        </div>
+        <div class="bubbles2">
+            <img src="imag/bubble.png">
+            <img src="imag/bubble.png">
+            <img src="imag/bubble.png">
+            <img src="imag/bubble.png">
+            <img src="imag/bubble.png">
+            <img src="imag/bubble.png">
+            <img src="imag/bubble.png">
+        </div>
+    </body>
+    <script type="text/javascript" src="vanilla-tilt.babel.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector(".sports"), {
+		max: 5,
+		speed: 400,
+        glare:true,
+        "max-glare":1,
+	});
+    VanillaTilt.init(document.querySelector(".movies"), {
+		max: 5,
+		speed: 400,
+        glare:true,
+        "max-glare":1,
+	});
+    VanillaTilt.init(document.querySelector(".Entertainment"), {
+		max: 5,
+		speed: 400,
+        glare:true,
+        "max-glare":1,
+	});
+    VanillaTilt.init(document.querySelector(".Studies"), {
+		max: 5,
+		speed: 400,
+        glare:true,
+        "max-glare":1,
+	});
+
+    VanillaTilt.init(document.querySelector(".wrapper"), {
+		max: 5,
+		speed: 400,
+        glare:true,
+        "max-glare":1,
+	});
+
+    document.getElementById('addPostForm').addEventListener('submit', addPost);
+    
+    const form = docment.querySelector("form"),
+    eField = form.querySelector(".inputform"),
+    eInput = eField.querySelector("input");
+
+    form.onsubmit = (e)=>{
+        e.preventDefault();
+        if(eField.value == ""){
+            eField.classList.add("shake");
+        }
+    }
+    </script>
+ </html>
